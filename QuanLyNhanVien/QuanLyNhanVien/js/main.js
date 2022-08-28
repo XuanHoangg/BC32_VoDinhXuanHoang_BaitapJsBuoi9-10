@@ -205,8 +205,8 @@ function validateName() {
         spanEL.innerHTML = "Tên không được có ký số";
         return false;
     }
-    let regex = /[a-zA-z]+$/
-    if (!regex.test(name)) {
+    let regex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]$/
+    if (regex.test(name)) {
         spanEL.innerHTML = "Tên không được có kí tự đặc biệt";
         return false;
     }
